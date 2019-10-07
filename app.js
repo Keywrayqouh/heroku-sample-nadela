@@ -2,7 +2,7 @@ const express = require('express')
 const app = express();
 var path = require('path');
 var users = [];
-
+var port = process.env.PORT || 3000
 
 
 app.all('/', function (req, res) {
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 })
 
 //Listen on port 3000
-server = app.listen(3000)
+server = app.listen(port)
 console.log("coonected")
 
 
